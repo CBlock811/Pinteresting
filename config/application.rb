@@ -22,5 +22,9 @@ module Pinteresting
 
     #from devise, required for Heroku
     config.assets.initialize_on_precompile = false
+    config.paperclip_defaults = {
+        :storage => :s3,
+        :s3_host_name => 'pinterest-for-adventurers.s3.amazonaws.com'
+    }
   end
 end
